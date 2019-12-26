@@ -36,7 +36,7 @@ import org.mongodb.scala.model.Collation
  * @tparam TResult The type of the result.
  * @since 1.0
  */
-case class MapReduceObservable[TResult](wrapped: MapReduceIterable[TResult]) extends Observable[TResult] {
+case class MapReduceObservable[TResult](val wrapped: MapReduceIterable[TResult]) extends Observable[TResult] {
   /**
    * Sets the collectionName for the output of the MapReduce
    *

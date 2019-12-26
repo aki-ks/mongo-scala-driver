@@ -32,7 +32,7 @@ import org.mongodb.scala.internal.ObservableHelper._
  * @tparam TResult The type of the result.
  * @since 1.0
  */
-case class ListCollectionsObservable[TResult](wrapped: ListCollectionsIterable[TResult]) extends Observable[TResult] {
+case class ListCollectionsObservable[TResult](val wrapped: ListCollectionsIterable[TResult]) extends Observable[TResult] {
 
   /**
    * Sets the query filter to apply to the query.

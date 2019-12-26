@@ -31,7 +31,7 @@ import org.mongodb.scala.{Observable, Observer}
  *
  * @since 1.2
  */
-case class GridFSFindObservable(private val wrapped: GridFSFindIterable) extends Observable[GridFSFile] {
+case class GridFSFindObservable(val wrapped: GridFSFindIterable) extends Observable[GridFSFile] {
 
   /**
    * Sets the query filter to apply to the query.

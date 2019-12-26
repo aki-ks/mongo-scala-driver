@@ -35,7 +35,7 @@ import org.mongodb.scala.model.Collation
  * @tparam TResult The type of the result.
  * @since 1.0
  */
-case class FindObservable[TResult](private val wrapped: FindIterable[TResult]) extends Observable[TResult] {
+case class FindObservable[TResult](val wrapped: FindIterable[TResult]) extends Observable[TResult] {
   /**
    * Helper to return a Observable limited to just the first result the query.
    *

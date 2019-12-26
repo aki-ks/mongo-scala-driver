@@ -33,7 +33,7 @@ import org.mongodb.scala.model.Collation
  * @tparam TResult The type of the result.
  * @since 1.0
  */
-case class DistinctObservable[TResult](private val wrapped: DistinctIterable[TResult]) extends Observable[TResult] {
+case class DistinctObservable[TResult](val wrapped: DistinctIterable[TResult]) extends Observable[TResult] {
   /**
    * Sets the query filter to apply to the query.
    *

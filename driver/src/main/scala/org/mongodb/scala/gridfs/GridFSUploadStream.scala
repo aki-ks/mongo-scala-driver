@@ -33,7 +33,7 @@ import org.mongodb.scala.{Completed, Observable}
  *
  * @since 1.2
  */
-case class GridFSUploadStream(private val wrapped: JGridFSUploadStream) extends AsyncOutputStream {
+case class GridFSUploadStream(val wrapped: JGridFSUploadStream) extends AsyncOutputStream {
 
   /**
    * Gets the ObjectId for the file to be uploaded

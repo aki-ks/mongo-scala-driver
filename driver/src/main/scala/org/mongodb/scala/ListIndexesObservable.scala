@@ -31,7 +31,7 @@ import org.mongodb.scala.internal.ObservableHelper._
  * @tparam TResult The type of the result.
  * @since 1.0
  */
-case class ListIndexesObservable[TResult](wrapped: ListIndexesIterable[TResult]) extends Observable[TResult] {
+case class ListIndexesObservable[TResult](val wrapped: ListIndexesIterable[TResult]) extends Observable[TResult] {
 
   /**
    * Sets the maximum execution time on the server for this operation.

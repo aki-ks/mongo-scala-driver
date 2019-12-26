@@ -87,7 +87,7 @@ object MergeOptions {
  *
  * @since 2.7
  */
-case class MergeOptions(wrapped: JMergeOptions = new JMergeOptions()) {
+case class MergeOptions(val wrapped: JMergeOptions = new JMergeOptions()) {
 
   /**
    * Sets the field that act as a unique identifier for a document. The identifier determine if a results document matches an

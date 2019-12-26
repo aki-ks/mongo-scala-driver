@@ -36,7 +36,7 @@ import org.mongodb.scala.model.vault.{DataKeyOptions, EncryptOptions}
  * @since 2.7
  */
 @Beta
-case class ClientEncryption(private val wrapped: JClientEncryption) extends Closeable {
+case class ClientEncryption(val wrapped: JClientEncryption) extends Closeable {
 
   /**
    * Create a data key with the given KMS provider.

@@ -31,7 +31,7 @@ import org.mongodb.scala.{Completed, Observable}
  *
  * @since 1.2
  */
-case class GridFSDownloadStream(private val wrapped: JGridFSDownloadStream) extends AsyncInputStream {
+case class GridFSDownloadStream(val wrapped: JGridFSDownloadStream) extends AsyncInputStream {
   /**
    * Gets the corresponding GridFSFile for the file being downloaded
    *

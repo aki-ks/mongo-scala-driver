@@ -54,7 +54,7 @@ object GridFSBucket {
  *
  * @since 1.2
  */
-case class GridFSBucket(private val wrapped: JGridFSBucket) {
+case class GridFSBucket(val wrapped: JGridFSBucket) {
 
   /**
    * The bucket name.

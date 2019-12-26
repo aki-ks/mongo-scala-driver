@@ -38,7 +38,7 @@ import org.mongodb.scala.result._
  * @tparam TResult The type that this collection will encode documents from and decode documents to.
  * @since 1.0
  */
-case class MongoCollection[TResult](private val wrapped: JMongoCollection[TResult]) {
+case class MongoCollection[TResult](val wrapped: JMongoCollection[TResult]) {
   /**
    * Gets the namespace of this collection.
    *

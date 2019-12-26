@@ -32,7 +32,7 @@ import org.mongodb.scala.model.Collation
  * @tparam TResult The type of the result.
  * @since 1.0
  */
-case class AggregateObservable[TResult](private val wrapped: AggregateIterable[TResult]) extends Observable[TResult] {
+case class AggregateObservable[TResult](val wrapped: AggregateIterable[TResult]) extends Observable[TResult] {
 
   /**
    * Enables writing to temporary files. A null value indicates that it's unspecified.

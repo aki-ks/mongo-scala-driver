@@ -38,7 +38,7 @@ import scala.concurrent.duration.Duration
  * @since 2.2
  * @note Requires MongoDB 3.6 or greater
  */
-case class ChangeStreamObservable[TResult](private val wrapped: ChangeStreamIterable[TResult]) extends Observable[ChangeStreamDocument[TResult]] {
+case class ChangeStreamObservable[TResult](val wrapped: ChangeStreamIterable[TResult]) extends Observable[ChangeStreamDocument[TResult]] {
 
   /**
    * Sets the fullDocument value.

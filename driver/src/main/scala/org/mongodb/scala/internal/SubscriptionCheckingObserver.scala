@@ -18,7 +18,7 @@ package org.mongodb.scala.internal
 
 import org.mongodb.scala.{Observer, Subscription}
 
-private[scala] case class SubscriptionCheckingObserver[T](wrapped: Observer[T]) extends Observer[T] {
+private[scala] case class SubscriptionCheckingObserver[T](val wrapped: Observer[T]) extends Observer[T] {
   @volatile
   private var subscription: Option[Subscription] = None
 

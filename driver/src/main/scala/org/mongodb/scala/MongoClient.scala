@@ -133,7 +133,7 @@ object MongoClient {
  * @param wrapped the underlying java MongoClient
  * @since 1.0
  */
-case class MongoClient(private val wrapped: JMongoClient) extends Closeable {
+case class MongoClient(val wrapped: JMongoClient) extends Closeable {
 
   /**
    * Creates a client session.
